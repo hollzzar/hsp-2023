@@ -1,0 +1,116 @@
+---
+title: "Sentential context impacts bilingual speech-in-speech recognition"
+poster_height: "36in"
+poster_width: "48in"
+font_family: Avenir
+titletext_fontfamily: Avenir
+primary_colour: "#001E44"
+secondary_colour: "#016c5920"
+accent_colour: "#d7d8db"
+author:
+  - name: "Holly A. Zaharchuk"
+  - name: "Victoria Medina"
+  - name: "Sarah Paterno"
+  - name: "Navin Viswanathan"
+  - name: "Janet G. Van Hell"
+affiliation:
+  - address: "Department of Psychology \\& Center for Language Science"
+  - address: "The Pennsylvania State University"
+column_numbers: 3
+logoright_name: "BiLD_logo_white.png"
+logoleft_name: "Logo_PSU_white.png"
+titlebox_borderwidth: "0.5cm"
+sectitle_borderwidth: "1mm"
+titlebox_bordercol: "#001E44"
+author_textcol: "#FFFFFF"
+sectitle_textsize: "45pt"
+sectitle2_textsize: "40pt"
+body_textsize: "30pt"
+sectitle_boxshape: "3mm 0mm"
+link_col: "#016c59"
+columnline_style: solid
+columnline_col: "#d7d8db"
+columnline_width: "2mm"
+output: 
+  posterdown::posterdown_html:
+    self_contained: false
+---
+
+<!--     pandoc_args: [ -->
+<!--       "--lua-filter", "~/Mirror/format_files/multiple-bibliographies-new.lua", -->
+<!--       "--lua-filter", "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmdfiltr/replace_ampersands.lua" -->
+<!--       ] -->
+<!-- bibliography: cs_project.bib -->
+<!-- nocite: "@*" -->
+<!-- link-citations: no -->
+<!-- csl: apa7_auth.csl -->
+
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+## R setup ##
+
+# knitr settings
+# chooseCRANmirror(graphics = FALSE, ind = 1)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+# knitr::knit_hooks$set(document  =  function(x) {sub('\\usepackage[]{color}', '\\usepackage{xcolor}', x, fixed  =  TRUE)})
+```
+
+```{r load, echo = FALSE}
+source("/Users/hollyzaharchuk/Mirror/Project_CS/data/8_visualize.R")
+```
+
+# Research background
+
+```{r lrm, out.width = "100%", out.extra = ""}
+knitr::include_graphics("LRM-bubbles_v3.png")
+```
+
+# Participants
+
+```{r par_info, out.width = "100%", out.extra = "", dpi = 300}
+lang_dom
+```
+
+# Procedure
+
+```{r proc, out.width = "100%", out.extra = ""}
+knitr::include_graphics("proc_v2.png")
+```
+
+## Accuracy benefit for English versus Spanish decreases by ~20% in code-switched versus single-language sentences
+
+```{r exp_2, out.width = "100%", out.extra = "", dpi = 300}
+exp_2
+```
+
+## Removing single-language stimuli shifts transcription advantage from pre-switch to post-switch keywords
+
+```{r cs_sent, out.width = "100%", out.extra = "", dpi = 300}
+cs_sent_plot
+```
+
+## Code-switched Spanish words are more susceptible to masker language than code-switched English words
+
+```{r cs_word, out.width = "100%", out.extra = "", dpi = 300}
+cs_word_plot
+```
+
+# Stimulus examples
+
+```{r method_info, out.width = "100%", out.extra = ""}
+ejemplo_tab
+```
+
+# Result summary
+
+```{r sum_info, out.width = "100%", out.extra = ""}
+analysis_tab
+```
+
+# References and acknowledgements
+
+<div style = "text-align: leftt"><font size = 6>Brouwer, S., Van Engen, K. J., Calandruccio, L., & Bradlow, A. R. (2012).</font></div>
+<div style = "text-align: leftt"><font size = 6>Fernandez, C. B., Litcofsky, K. A., & Van Hell, J. G. (2019).</font></div>
+<div style = "text-align: leftt"><font size = 6>Lecumberri, M. L. G., Cooke, M., & Cutler, A. (2010).</font></div>
+<div style = "text-align: leftt"><font size = 6>Viswanathan, N., Kokkinakis, K., & Williams, B. T. (2018).</font></div>
+
+<img style = "padding: 0 15px; float:left;" src = "qr_code.png" width = 7% height = 7%> <div style = "text-align: right"><font size = 6>Holly A. Zaharchuk: hzaharchuk@psu.edu</font></div> <div style = "text-align: right"><font size = 6>University Graduate Fellow (UGF)</font></div>
