@@ -76,19 +76,23 @@ lang_dom
 knitr::include_graphics("proc_v2.png")
 ```
 
-## Accuracy benefit for English versus Spanish decreases by ~20% in code-switched versus single-language sentences
+# Analyses
+
+<div style = "text-align: center"><font size = 40>Accuracy benefit for English versus Spanish decreases by ~20% in code-switched versus single-language sentences</font></div>
 
 ```{r exp_2, out.width = "100%", out.extra = "", dpi = 300}
 exp_2
 ```
 
-## Removing single-language stimuli shifts transcription advantage from pre-switch to post-switch keywords
+<div style = "text-align: center"><font size = 40>Removing single-language stimuli shifts transcription advantage from pre-switch keywords to post-switch keywords</font></div>
 
 ```{r cs_sent, out.width = "100%", out.extra = "", dpi = 300}
 cs_sent_plot
 ```
 
-## Code-switched Spanish words are more susceptible to masker language than code-switched English words
+<div style = "text-align: leftt"><font size = 4>*Keyword accuracy (1,0) and reaction time data analyzed via linear mixed-effects models controlling for keyword position, language dominance (difference between English and Spanish LexTALE scores), and code-switching frequency (mean of L1-switch, L2-switch, and contextual switch responses on the bilingual switching questionnaire; see Rodriguez-Fornells et al., 2012)*</font></div>
+
+<div style = "text-align: center"><font size = 40>Code-switched Spanish words are more susceptible to masker language than code-switched English words</font></div>
 
 ```{r cs_word, out.width = "100%", out.extra = "", dpi = 300}
 cs_word_plot
@@ -109,9 +113,10 @@ analysis_tab
 # References and acknowledgements
 
 <img style = "padding: 0px; float:right;" src = "qr_code.png" width = 7% height = 7%>
-<div style = "text-align: leftt"><font size = 6>Brouwer, S., Van Engen, K. J., Calandruccio, L., & Bradlow, A. R. (2012).</font></div>
-<div style = "text-align: leftt"><font size = 6>Fernandez, C. B., Litcofsky, K. A., & Van Hell, J. G. (2019).</font></div>
-<div style = "text-align: leftt"><font size = 6>Lecumberri, M. L. G., Cooke, M., & Cutler, A. (2010).</font></div>
-<div style = "text-align: leftt"><font size = 6>Viswanathan, N., Kokkinakis, K., & Williams, B. T. (2018).</font></div>
+<div style = "text-align: left"><font size = 6>Brouwer, S., Van Engen, K. J., Calandruccio, L., & Bradlow, A. R. (2012).</font></div>
+<div style = "text-align: left"><font size = 6>Fernandez, C. B., Litcofsky, K. A., & Van Hell, J. G. (2019).</font></div>
+<div style = "text-align: left"><font size = 6>Lecumberri, M. L. G., Cooke, M., & Cutler, A. (2010).</font></div>
+<div style = "text-align: left"><font size = 6>Rodriguez-Fornells, A., Krämer, U. M., Lorenzo-Seva, U., Festman, J., & Münte, T. F. (2012).</font></div>
+<div style = "text-align: left"><font size = 6>Viswanathan, N., Kokkinakis, K., & Williams, B. T. (2018).</font></div>
 
 <div style = "text-align: right"><font size = 6>Holly A. Zaharchuk: hzaharchuk@psu.edu</font></div> <div style = "text-align: right"><font size = 6>University Graduate Fellow (UGF)</font></div>
