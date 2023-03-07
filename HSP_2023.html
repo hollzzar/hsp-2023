@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Avenir' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Avenir' rel='stylesheet'>
+
+
+
+<title>Sentential context impacts bilingual speech-in-speech recognition</title>
+
+
+<script src="HSP_2023_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="HSP_2023_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<style>
+@page {
+size: 48in 36in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 30pt;
+width: 48in;
+height: 36in;
+padding: 0;
+text-align: justify;
+font-family: Avenir;
+}
+.poster_wrap {
+width: 48in;
+height: 36in;
+padding: 0cm;
+}
+.title_container {
+width: 48in;
+height: calc(36in * 0.15);
+overflow: hidden;
+background-color: #001E44;
+border: 0.5cm solid #016c5920;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #001E44;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #001E44;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Avenir;
+}
+/* unvisited link */
+a:link {
+color: #016c59;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #016c59;
+}
+
+/* mouse over link */
+a:hover {
+color: #016c59;
+}
+
+/* selected link */
+a:active {
+color: #016c59;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 2mm;
+-moz-column-rule-width: 2mm;
+column-rule-width: 2mm;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: #d7d8db;
+-moz-column-rule-color: #d7d8db;
+column-rule-color: #d7d8db;
+column-gap: 0.5cm;
+padding-left: calc(0.5cm / 2);
+padding-right: calc(0.5cm / 2);
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(48in + 0.5cm + 0.5cm);
+height: calc(36in * 0.83);
+padding-top: calc(36in * 0.005);
+padding-bottom: calc(36in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #FFFFFF;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 45pt;
+border: 1mm solid #001E44;
+background-color: #001E44;
+border-radius: 3mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #016c592024;
+color: #001E44;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'Logo_PSU_white.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Sentential context impacts bilingual speech-in-speech recognition</h1>
+<h3 id="author">Holly A. Zaharchuk<sup></sup>, Victoria Medina<sup></sup>, Sarah Paterno<sup></sup>, Navin Viswanathan<sup></sup>, Janet G. Van Hell<sup></sup></h3><br>
+<h5 id="affiliation"><sup></sup> Department of Psychology &amp; Center for Language Science<br> <sup></sup> The Pennsylvania State University</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=BiLD_logo_white.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<!--     pandoc_args: [ -->
+<!--       "--lua-filter", "~/Mirror/format_files/multiple-bibliographies-new.lua", -->
+<!--       "--lua-filter", "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmdfiltr/replace_ampersands.lua" -->
+<!--       ] -->
+<!-- bibliography: cs_project.bib -->
+<!-- nocite: "@*" -->
+<!-- link-citations: no -->
+<!-- csl: apa7_auth.csl -->
+<div id="research-background" class="section level1">
+<h1>Research background</h1>
+<p><img src="LRM-bubbles_v3.png" width="100%"  /></p>
+</div>
+<div id="participants" class="section level1">
+<h1>Participants</h1>
+<p><img src="HSP_2023_files/figure-html/par_info-1.png" width="100%"  /></p>
+</div>
+<div id="procedure" class="section level1">
+<h1>Procedure</h1>
+<p><img src="proc_v2.png" width="100%"  /></p>
+<div id="accuracy-benefit-for-english-versus-spanish-decreases-by-20-in-code-switched-versus-single-language-sentences" class="section level2">
+<h2>Accuracy benefit for English versus Spanish decreases by ~20% in code-switched versus single-language sentences</h2>
+<p><img src="HSP_2023_files/figure-html/exp_2-1.png" width="100%"  /></p>
+</div>
+<div id="removing-single-language-stimuli-shifts-transcription-advantage-from-pre-switch-to-post-switch-keywords" class="section level2">
+<h2>Removing single-language stimuli shifts transcription advantage from pre-switch to post-switch keywords</h2>
+<p><img src="HSP_2023_files/figure-html/cs_sent-1.png" width="100%"  /></p>
+</div>
+<div id="code-switched-spanish-words-are-more-susceptible-to-masker-language-than-code-switched-english-words" class="section level2">
+<h2>Code-switched Spanish words are more susceptible to masker language than code-switched English words</h2>
+<p><img src="HSP_2023_files/figure-html/cs_word-1.png" width="100%"  /></p>
+</div>
+</div>
+<div id="stimulus-examples" class="section level1">
+<h1>Stimulus examples</h1>
+<table class="table" style="font-size: 30px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="2">
+<div style="">
+Experiment
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Sentence type
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+English critical word
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Spanish critical word
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #1F78B4 !important;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+A
+</td>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #FFFFFF !important;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+Single-language
+</td>
+<td style="text-align:left;width: 585px; border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+I <em>think</em> that <em>puppies</em> are <em>scared</em> of <em>vacuums</em> because they are <em>loud</em>.
+</td>
+<td style="text-align:left;width: 585px; border-left:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+<em>Creo</em> que los <em>cachorros</em> tienen <em>miedo</em> de las <em>aspiradoras</em> porque hacen mucho <em>ruido</em>.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #33A02C !important;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+B
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+Code-switched
+</td>
+<td style="text-align:left;width: 585px; border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+<em>Creo</em> que los <em>cachorros</em> tienen <em>miedo</em> de los <strong><em>vacuums</em></strong> because they are <em>loud</em>.
+</td>
+<td style="text-align:left;width: 585px; border-left:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+I <em>think</em> that <em>puppies</em> are <em>scared</em> of <strong><em>aspiradoras</em></strong> porque hacen mucho <em>ruido</em>.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="result-summary" class="section level1">
+<h1>Result summary</h1>
+<table class="table" style="font-size: 30px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="2">
+<div style="">
+Experiment
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Analysis
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Measure
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Level
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Context
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Prediction
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; vertical-align:middle;" colspan="1">
+<div style="">
+Observation
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #1F78B4 !important;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+A
+</td>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #FFFFFF !important;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+1
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="3">
+Transcription (accuracy)
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+Sentence
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+<strong>Single-language</strong> versus <strong>Code-switch</strong>
+</td>
+<td style="text-align:left;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+Incongruent Target-Masker benefit attenuated by code-switching
+</td>
+<td style="text-align:left;border-left:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+Target-Context interaction with Masker main
+</td>
+</tr>
+<tr>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #33A02C !important;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="3">
+B
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+2-3
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="3">
+<strong>Spanish-English</strong> versus <strong>English-Spanish</strong> code-switches
+</td>
+<td style="text-align:left;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="3">
+Incongruent Target-Masker benefit
+</td>
+</tr>
+<tr>
+<td style="text-align:center;max-width: 100px; font-weight: bold;color: #FFFFFF !important;background-color: #FFFFFF !important;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+4
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+Word
+</td>
+<td style="text-align:left;border-left:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;vertical-align: middle !important;" rowspan="2">
+Congruent Target-Masker benefit for Spanish
+</td>
+</tr>
+<tr>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+5
+</td>
+<td style="text-align:center;border-left:2.5px solid #d7d8db;;border-right:2.5px solid #d7d8db;;vertical-align:middle;border-bottom: 2.5px solid #d7d8db; border-top: 2.5px solid #d7d8db;">
+Detection (RT)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="references-and-acknowledgements" class="section level1">
+<h1>References and acknowledgements</h1>
+<div style="text-align: leftt">
+<font size = 6>Brouwer, S., Van Engen, K. J., Calandruccio, L., &amp; Bradlow, A. R. (2012).</font>
+</div>
+<div style="text-align: leftt">
+<font size = 6>Fernandez, C. B., Litcofsky, K. A., &amp; Van Hell, J. G. (2019).</font>
+</div>
+<div style="text-align: leftt">
+<font size = 6>Lecumberri, M. L. G., Cooke, M., &amp; Cutler, A. (2010).</font>
+</div>
+<div style="text-align: leftt">
+<font size = 6>Viswanathan, N., Kokkinakis, K., &amp; Williams, B. T. (2018).</font>
+</div>
+<img style = "padding: 0 15px; float:left;" src = "qr_code.png" width = 7% height = 7%>
+<div style="text-align: right">
+<font size = 6>Holly A. Zaharchuk: <a href="mailto:hzaharchuk@psu.edu" class="email">hzaharchuk@psu.edu</a></font>
+</div>
+<div style="text-align: right">
+<font size = 6>University Graduate Fellow (UGF)</font>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
