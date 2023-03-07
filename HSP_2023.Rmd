@@ -108,9 +108,10 @@ analysis_tab
 
 # References and acknowledgements
 
+<img style = "padding: 0px; float:right;" src = "qr_code.png" width = 7% height = 7%>
 <div style = "text-align: leftt"><font size = 6>Brouwer, S., Van Engen, K. J., Calandruccio, L., & Bradlow, A. R. (2012).</font></div>
 <div style = "text-align: leftt"><font size = 6>Fernandez, C. B., Litcofsky, K. A., & Van Hell, J. G. (2019).</font></div>
 <div style = "text-align: leftt"><font size = 6>Lecumberri, M. L. G., Cooke, M., & Cutler, A. (2010).</font></div>
 <div style = "text-align: leftt"><font size = 6>Viswanathan, N., Kokkinakis, K., & Williams, B. T. (2018).</font></div>
 
-<img style = "padding: 0 15px; float:left;" src = "qr_code.png" width = 7% height = 7%> <div style = "text-align: right"><font size = 6>Holly A. Zaharchuk: hzaharchuk@psu.edu</font></div> <div style = "text-align: right"><font size = 6>University Graduate Fellow (UGF)</font></div>
+<div style = "text-align: right"><font size = 6>Holly A. Zaharchuk: hzaharchuk@psu.edu</font></div> <div style = "text-align: right"><font size = 6>University Graduate Fellow (UGF)</font></div>
