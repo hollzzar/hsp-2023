@@ -8,13 +8,22 @@ primary_colour: "#001E44"
 secondary_colour: "#016c5920"
 accent_colour: "#d7d8db"
 author:
-  - name: "Holly A. Zaharchuk"
-  - name: "Victoria Medina"
-  - name: "Sarah Paterno"
-  - name: "Navin Viswanathan"
-  - name: "Janet G. Van Hell"
+  - name: Holly A. Zaharchuk
+    affil: 1
+  - name: Victoria Medina
+    affil: 1
+  - name: Sarah Paterno
+    affil: 1
+  - name: Navin Viswanathan
+    affil: 2
+  - name: Janet G. van Hell
+    affil: 1
 affiliation:
-  - address: "Department of Psychology \\& Center for Language Science"
+  - num: 1
+    address: "Department of Psychology"
+  - num: 2
+    address: "Department of Communication Sciences and Disorders"
+  - address: "Center for Language Science"
   - address: "The Pennsylvania State University"
 column_numbers: 3
 logoright_name: "BiLD_logo_white.png"
@@ -90,9 +99,9 @@ exp_2
 cs_sent_plot
 ```
 
-<div style = "text-align: leftt"><font size = 4>*Keyword accuracy (1,0) and reaction time data analyzed via linear mixed-effects models controlling for keyword position, language dominance (difference between English and Spanish LexTALE scores), and code-switching frequency (mean of L1-switch, L2-switch, and contextual switch responses on the bilingual switching questionnaire; see Rodriguez-Fornells et al., 2012)*</font></div>
+<div style = "text-align: leftt"><font size = 4>*Keyword accuracy (1,0) and RT (inverse transformed) analyzed via linear mixed-effects models controlling for keyword position, language dominance (difference between English and Spanish LexTALE), and code-switching frequency (mean of L1-switch, L2-switch, and contextual switch responses on bilingual switching questionnaire; see Rodriguez-Fornells et al., 2012)*</font></div>
 
-<div style = "text-align: center"><font size = 40>Code-switched Spanish words are more susceptible to masker language than code-switched English words</font></div>
+<div style = "text-align: center"><font size = 40>Code-switched Spanish words are more sensitive to masker language than code-switched English words</font></div>
 
 ```{r cs_word, out.width = "100%", out.extra = "", dpi = 300}
 cs_word_plot
