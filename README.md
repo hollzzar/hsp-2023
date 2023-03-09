@@ -4,7 +4,7 @@ I will present this poster at the [36th Annual Conference on Human Sentence Proc
 
 We conducted two online experiments with Spanish-English bilinguals to understand the relations between language experience and speech-in-speech performance.
 We embedded target sentences in babble spoken by two Spanish or two English talkers at +5 dB SNR.
-In one of the two experiments, while listening to each sentence, participants pressed the space bar when they heard the target talker switch languages (detection task). 
+In one of the two experiments, which only included code-switched sentences, participants pressed the space bar when they heard the target talker switch languages (detection task). 
 In both experiments, after listening to each sentence, participants typed as much of the sentence as they could remember (transcription task).
 There were 160 sentences in each condition.
 For the transcription task, we analyzed accuracy on each individual keyword in each sentence.
