@@ -15,5 +15,5 @@ In this repository, you will find:
 - The HTML output from the markdown file
 - The R script where I saved the commands to convert the HTML output into a PDF
 - The final PDF of my poster
-- Various logos/images; in the images folder, I also have the dialect exposure map from a separate R script
+- Various logos/images
 - Plot/graph outputs from the R markdown file in the HSP_2023_files folder
