@@ -1,6 +1,6 @@
 # HSP 2023 poster
 
-I will present this poster at the [36th Annual Conference on Human Sentence Processing](https://lrdc.pitt.edu/HSP2023/) at the University of Pittsburgh.
+I presented this poster at the [36th Annual Conference on Human Sentence Processing](https://lrdc.pitt.edu/HSP2023/) at the University of Pittsburgh.
 
 We conducted two online experiments with Spanish-English bilinguals to understand the relations between language experience and speech-in-speech performance.
 We embedded target sentences in babble spoken by two Spanish or two English talkers at +5 dB SNR.
